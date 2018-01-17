@@ -8,7 +8,7 @@ var Config = {
     dist_files: DIST_FILES,
     html: {  
         src: SRC_DIR + 'html/**/*.html',  
-        dist: DIST_DIR + 'html'
+        dist: DIST_DIR
     },  
     assets: {  
         src: SRC_DIR + 'assets/**/*',            // assets目录：./src/assets  
