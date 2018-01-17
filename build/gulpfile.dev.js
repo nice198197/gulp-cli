@@ -74,13 +74,13 @@ function dev() {
         gulp.watch(Config.html.src, ['html:dev']);
         // Watch .css files  
         gulp.watch(Config.css.src, ['css:dev']);
-        // Watch .scss files  
+        // Watch .stylus files  
         gulp.watch(Config.stylus.src, ['stylus:dev']);
         // Watch assets files  
         gulp.watch(Config.assets.src, ['assets:dev']);
         // Watch .js files  
         gulp.watch(Config.js.src, ['js:dev']);
-        // Watch image files  
+        // Watch images files  
         gulp.watch(Config.img.src, ['images:dev']);
     });
 }
