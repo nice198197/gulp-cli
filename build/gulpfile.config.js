@@ -8,7 +8,7 @@ var Config = {
     dist_files: DIST_FILES,
     html: {  
         src: SRC_DIR + 'html/**/*.html',  
-        dist: DIST_DIR  
+        dist: DIST_DIR + 'html'
     },  
     assets: {  
         src: SRC_DIR + 'assets/**/*',            // assets目录：./src/assets  
@@ -20,7 +20,7 @@ var Config = {
     },  
     stylus: {  
         src: SRC_DIR + 'stylus/**/*.styl',         // Stylus目录：./src/stylus/  
-        dist: DIST_DIR + 'css'                   // Stylus文件生成CSS后存放的目录：./dist/css  
+        dist: SRC_DIR + 'css'                   // Stylus文件生成CSS后存放的目录：./dist/css  
     },  
     js: {  
         src: SRC_DIR + 'js/**/*.js',             // JS目录：./src/js/  

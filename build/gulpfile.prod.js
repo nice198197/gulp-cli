@@ -25,7 +25,7 @@ function prod() {
      * CSS样式处理 
      */
     gulp.task('css', function () {
-        return gulp.src(Config.css.src).pipe(autoprefixer('last 2 version')).pipe(gulp.dest(Config.css.dist)).pipe(rename({
+        return gulp.src(Config.css.src).pipe(autoprefixer('last 2 version')).pipe(rename({
                 suffix: '.min'
             })).pipe(cssnano()) //执行压缩  
             .pipe(gulp.dest(Config.css.dist));
@@ -34,17 +34,13 @@ function prod() {
      * Stylus样式处理 
      */
     gulp.task('stylus', function () {
-        return gulp.src(Config.stylus.src).pipe(autoprefixer('last 2 version')).pipe(stylus()).pipe(gulp.dest(Config.stylus.dist)).pipe(rename({
-                suffix: '.min'
-            })) //rename压缩后的文件名  
-            .pipe(cssnano()) //执行压缩  
-            .pipe(gulp.dest(Config.stylus.dist));
+        return gulp.src(Config.stylus.src).pipe(stylus()).pipe(gulp.dest(Config.stylus.dist));
     });
     /** 
      * js处理 
      */
     gulp.task('js', function () {
-        return gulp.src(Config.js.src).pipe(gulp.dest(Config.js.dist)).pipe(rename({
+        return gulp.src(Config.js.src).pipe(rename({
             suffix: '.min'
         })).pipe(uglify()).pipe(gulp.dest(Config.js.dist));
     });
@@ -52,7 +48,7 @@ function prod() {
      * 合并所有js文件并做压缩处理 
      */
     gulp.task('js-concat', function () {
-        return gulp.src(Config.js.src).pipe(jshint('.jshintrc')).pipe(jshint.reporter('default')).pipe(concat(Config.js.build_name)).pipe(gulp.dest(Config.js.dist)).pipe(rename({
+        return gulp.src(Config.js.src).pipe(concat(Config.js.build_name)).pipe(gulp.dest(Config.js.dist)).pipe(rename({
             suffix: '.min'
         })).pipe(uglify()).pipe(gulp.dest(Config.js.dist));
     });
@@ -66,6 +62,6 @@ function prod() {
             , interlaced: true
         })).pipe(gulp.dest(Config.img.dist));
     });
-    gulp.task('build', ['html', 'css', 'sass', 'js', 'assets', 'images']);
+    gulp.task('build', ['html', 'css', 'stylus', 'js', 'assets', 'images']);
 }
 module.exports = prod;
