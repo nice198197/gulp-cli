@@ -27,7 +27,3 @@ html {
     transform: scaleY(0.5);
   }
 }
-body {
-  background-image: url("./../images/report_title.png");
-  background-repeat: no-repeat;
-}

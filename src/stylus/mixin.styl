@@ -16,3 +16,9 @@ border-none()
 bg-image($url)
   background-image: url($url)
   background-repeat: no-repeat
+
+opacity-ie($opacity)
+  opacity $opacity
+  // IE8 filter
+  $opacity-ie = ($opacity * 100)
+  filter s('alpha(opacity=%s)', $opacity-ie)
