@@ -19,7 +19,7 @@
 2、dist为项目打包文件夹
 
 3、src为项目源码文件夹
-    3.1、assets为第三方资源文件夹
+    3.1、assets为第三方资源文件夹（此项目主要使用layui,并且使用它的模块化方案，具体参照http://www.layui.com/）
     3.2、css为stylus编译后的文件夹
     3.3、html为页面文件夹
     3.4、images为图片资源文件夹
